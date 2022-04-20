@@ -14,9 +14,7 @@ const juiceContent = document.getElementById('container_juice')
 const hideJuice = document.getElementById('juice_exit')
 const pokupka = document.getElementsByClassName ('pokupka')
 const tea = document.getElementById('tea')
-let Numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30]
 let a = ''
-const hz = document.getElementById('hz')
 const oplata = document.getElementById ('oplata')
 let num = 0
 
@@ -180,12 +178,6 @@ let juice_animation_exit = anime({
 });
     
 hideJuice.onclick = juice_animation_exit.play;
-
-tea.addEventListener('click', () => {
-  let html = pokupka[0].innerHTML;
-  html = html + '<div>hello</div>' 
-  pokupka[0].innerHTML =  html; 
-})
 
 function coffeeSelection() {
   const b = event.target.textContent;
