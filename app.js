@@ -59,12 +59,11 @@ show.addEventListener("click", () => {
 }
       i += 1;
       coffeeItem[i].classList.add ('active') 
-    }, 250);
+    }, 150);
 });
 
 let coffee_animation_exit = anime({
   targets: content,
-  width: '770px',
   height: '668px',
   duration: 500,
   easing: 'easeInQuint',
@@ -99,7 +98,6 @@ hideBao.addEventListener("click", () => {
 })
 let bao_animation_exit = anime({
       targets: baoContent,
-      width: '770px',
       height: '668px',
       duration: 500,
       easing: 'easeInQuint',
@@ -132,9 +130,8 @@ vasabi.onclick = vasabi_animation.play;
       },750)
       hideVasabi.style.display = 'none';
 })
-  let vasabi_animation_exit = anime({
+let vasabi_animation_exit = anime({
         targets: vasabiContent,
-        width: '770px',
         height: '668px',
         duration: 500,
         easing: 'easeInQuint',
@@ -169,7 +166,6 @@ juice.onclick = juice_animation.play;
 })
 let juice_animation_exit = anime({
           targets: juiceContent,
-          width: '770px',
           height: '668px',
           duration: 500,
           easing: 'easeInQuint',
