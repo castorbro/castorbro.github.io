@@ -1,0 +1,388 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: black;
+    box-sizing: border-box;
+}
+.main{
+    background-color: #004d3a;
+    width: 1024px;
+    height: 768px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+}
+#Atol{
+    font-size: 80px;
+    color: red;
+    position:absolute;
+    left: 45%;
+    top: 83%;
+}
+.footer{
+    background: #08352d;
+    width: 75%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.button{
+    height: 50%;
+    width: 22%;
+    background:#09463a;
+    float: left;
+    position: relative;
+    line-height: 2px;
+    border: none;
+    outline:1px solid #c2c2c2;
+    outline-offset: -1px;
+}
+.button a{
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+}
+#coffee_menu{
+    height: 100%;
+    width: 17%;
+    border-top:4px solid #ffffff;       
+}
+#tea{
+    height: 100%;
+    width: 17%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top:4px solid #ffffff;
+}
+#bao{border-top:4px solid #ffffff;}
+#vasabi{border-top:4px solid #ffffff;}
+#juice{border-top:4px solid #ffffff;}
+
+.pokupki{
+    height: 80%;
+    width: 25%;
+    background: #e4e4e4;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-y:auto;
+}
+.pokupki::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+}
+  
+.pokupki::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #b3b3b3;
+}
+  
+.pokupki::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    background-color: #f9f9fd;
+}
+
+.container_pokupki{
+    display:inline-grid;
+    grid-template-columns:1fr;
+    width: 100%;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(20px, auto);
+    overflow:auto;
+    line-height: 25px;
+}
+.pokupka{
+    display: grid;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 18px;
+    opacity: 0.9;
+}
+.oplata{
+    height: 15%;
+    width: 25%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: green;
+    border: none;
+}
+.knopka{
+    height: 60px;
+    width: 100%;
+    background-color: green;
+    cursor: pointer;
+}
+.text-knopki{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    position: absolute;
+    left: 15%;
+    top: 2%;
+    opacity: 0.95;
+}
+.text-knopki2{
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    position: absolute;
+    left: 15%;
+    top: 5%;
+    font-size: 12px;
+    opacity: 0.85;
+}
+.knopka:active{
+    background: red;
+    transition: 0s;
+}
+#exit_column{
+    background-color: rgb(255, 255, 255);
+    grid-column-start:1;
+    grid-column-end:6;
+    grid-template-columns: 10%;
+  }
+#exit{
+    position:fixed;
+    background-color: green;
+    height: 60px;
+    width: 60px;
+    background-image: url(/image/exit.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#svg_logo{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    }
+#svg_logo path{
+    stroke: #000000;
+    stroke-width: 0.5px;
+    stroke-dasharray: 1200px;
+    stroke-dashoffset: 1200px;
+    animation: move linear infinite;   
+    animation-duration: 20s;
+}
+@keyframes move{
+  0%    {fill: none;}
+  100%  {stroke-dashoffset: 0; }
+}
+#content{
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 25%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 60px;
+    overflow-y: auto;
+}
+#container_bao{
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 25%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    grid-template-columns: repeat(5, 1fr);
+}
+#bao_exit{
+    display: none;
+    background-color: green;
+    height: 60px;
+    width: 60px;
+    background-image: url(/image/exit.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#container_vasabi{
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 25%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    grid-template-columns: repeat(5, 1fr);
+}
+#vasabi_exit{
+    display: none;
+    background-color: green;
+    height: 60px;
+    width: 60px;
+    background-image: url(/image/exit.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#juice{
+    line-height: 15px;
+}
+#container_juice{
+    display: none;
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    right: 25%;
+    margin: 0 auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+}
+#juice_exit{
+    display: none;
+    background-color: green;
+    height: 60px;
+    width: 60px;
+    background-image: url(/image/exit.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cof_visible{
+    display: contents;
+}
+
+.coffee_item{
+    visibility: hidden;
+}
+.active{
+    visibility: visible;
+    animation: showBlock 1s linear forwards;
+    outline: 1px solid #034d3f;
+    font-size: 22px;
+}
+
+@keyframes showBlock {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.coffee_item a{
+    display: grid;
+    text-align: center;
+    background-color: white;
+    margin-top:180px;
+    height:60px;
+}
+#content::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f9f9fd;
+  }
+  
+  #content::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #034d3f;
+  }
+
+.exit_column_text{
+    position: absolute;
+    left:10%;
+}
+.coffee_item{
+    background-size: cover;
+    background-position: center center;
+    background-position-y: -30px;
+}
+#esspresso{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619a60756d7dc_w700.jpeg);
+}
+#cappuchino{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619a5f68c6f9b_w580.jpeg);
+}
+#latte{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619a5f68c6f9b_w580.jpeg);
+}
+#americano{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619a62b52c808_w580.jpeg);
+}
+#raf{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619586cb18fe0_w580.jpeg);
+}
+#raf_sc{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619586f8c4822_w580.jpeg);
+}
+#latte_p{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619a616e7cfd3_w580.jpeg);
+}
+#latte_honey{
+    background-image: url(https://img.eda1.ru/im/menuProduct/6199fec598f7f_w580.jpeg);
+}
+#matcha_tea_180{
+    background-image: url(https://img.eda1.ru/im/menuProduct/6195862eddc41_w580.jpeg);
+}
+#matcha_tea_300{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619a63b66de2e_w580.jpeg);
+}
+#hot_orange_matcha{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619585a811ded_w580.jpeg);
+}
+#flat_white{
+    background-image: url(https://img.eda1.ru/im/menuProduct/6199fd2bd2963_w580.jpeg);
+}
+#orange_esspresso{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619587b17a187_w580.jpeg);
+}
+#cold_orange_esspresso{
+    background-image: url(https://img.eda1.ru/im/menuProduct/619587b17a187_w580.jpeg);
+}
+#glintwein{
+    background-image: url(https://img.eda1.ru/im/menuProduct/61756629676ec.JPG);
+}
+div.stars {
+    width: 380px;
+    height: 210px;
+    margin-top: 10%;
+    margin-left: 25%;
+    background-color: #ffffff;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .8rem;
+    display: grid;
+    justify-content: center;
+  }
+  .text_rating{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+  }
+  input.star { display: none; }
+  label.star {
+   float: right;
+    padding: 10px;
+    font-size: 48px;
+    color: #444;
+    transition: all .2s;
+  }
+  input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+  }
+  input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+  }
+  input.star-1:checked ~ label.star:before { color: #F62; }
+  label.star:hover { transform: rotate(-15deg) scale(1.3); }
+  label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+  }
